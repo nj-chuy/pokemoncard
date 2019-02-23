@@ -8,7 +8,7 @@ class NavBar extends Component {
           <a className="navbar-brand">
             PokeMon Card Game
           </a>
-          <img src="https://images.pokemontcg.io/dp6/90_hires.png" alt="" style={{width: 50, height: 50}} />
+          <img src="https://images.pokemontcg.io/dp6/90_hires.png" alt="pokemon" style={{width: 50, height: 50}} />
         </nav>
       </div>
     );
