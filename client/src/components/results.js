@@ -1,5 +1,5 @@
 import React from "react";
-import BookCard from "./BookCard";
+import BookCard from "./bookCard";
 
 const Results = props => {
   console.log(props);
@@ -10,12 +10,18 @@ const Results = props => {
           props.booksProp.map((book, i) => {
             var info = book;
             return (
-              <BookCard
+              <BookCard 
+                id={info.id}
                 key={i}
                 title={info.name}
-                author={info.attacks[0].name}
+                attack={info.attacks[0].name}
+                attackDamage={info.attacks[0].damage}
                 description={info.rarity}
                 image={info.imageUrlHiRes}
+                artist={info.artist}
+                hp = {info.hp}
+                // resistances={info.resistances[0].type}
+                // weaknesses = {info.weaknesses[0].type}
               />
             );
           })

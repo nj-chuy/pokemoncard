@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Search from './Search';
+// import bookCard from './bookCard';
 import request from 'superagent';
 import Results from './results';
-import API from '../utils/API';
+// import API from '../utils/API';
 
 
 class BookSearch extends Component {
@@ -26,9 +27,6 @@ class BookSearch extends Component {
                 this.setState({ books: [...data.body.cards]})
                 console.log(data);
                 console.log(this.state.books);
-                this.state.books.forEach(function(books){
-                    API.saveBook(books)
-                })
             })
     }
 
@@ -37,6 +35,18 @@ class BookSearch extends Component {
         this.setState({ searchField: event.target.value })
     }
 
+    // handleIchooseYou = event => {
+    //     event.preventDefault();
+    //     if (this.state.title && this.state.author) {
+    //       API.saveBook({
+    //         title: this.state.title,
+    //         author: this.state.author,
+    //         synopsis: this.state.synopsis
+    //       })
+    //         .then(res => this.loadBooks())
+    //         .catch(err => console.log(err));
+    //     }
+    //   };
 
     render() { 
         return (
