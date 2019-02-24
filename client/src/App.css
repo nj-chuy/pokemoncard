@@ -17,6 +17,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+img.d-block.w-50 {
+  width: 50%;
+}
 
 .App-link {
   color: #61dafb;
