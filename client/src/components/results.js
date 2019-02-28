@@ -14,10 +14,10 @@ const Results = props => {
                 id={info.id}
                 key={i}
                 title={info.name}
-                attack={info.attacks[0].name}
-                attackDamage={info.attacks[0].damage}
-                description={info.rarity}
-                image={info.imageUrlHiRes}
+                attack={(info.attacks) ? info.attacks[0].name : info.attack}
+                attackDamage={(info.attacks) ? info.attacks[0].damage : info.attackDamage}
+                description={(info.hasOwnProperty("rarity")) ? info.rarity : info.description}
+                image={(info.hasOwnProperty("imageUrlHiRes")) ? info.imageUrlHiRes : info.image}
                 artist={info.artist}
                 hp = {info.hp}
                 // resistances={info.resistances[0].type}
