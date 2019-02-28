@@ -2,7 +2,7 @@ import React from "react";
 import API from "../utils/API";
 import PokeBtn from "../components/button";
 
-const bookCard = props => {
+const BookCard = props => {
   return (
     <div className="carousel slide">
       <div className="carousel-inner">
@@ -33,4 +33,4 @@ const bookCard = props => {
   );
 };
 
-export default bookCard;
+export default BookCard;
