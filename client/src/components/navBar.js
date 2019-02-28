@@ -5,9 +5,9 @@ class NavBar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary" >
-          <a className="navbar-brand">
+          <div className="navbar-brand">
             PokeMon Card Game
-          </a>
+          </div>
           <img src="https://images.pokemontcg.io/dp6/90_hires.png" alt="pokemon" style={{width: 50, height: 50}} />
         </nav>
       </div>
