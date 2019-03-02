@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 // access props from bookSearch
 const Search = (props) => {
         return ( 
@@ -9,7 +8,8 @@ const Search = (props) => {
                 <input onChange= {props.handleSearchProp} type="text"/>
                 {/* onChange will fire to event handler with each input */}
                 <button type="submit">Choose Your Pokemon!</button>
-             </form>
+                <button type="submitResults">Your PokeDeck</button>
+            </form>
             </div>
          )
 }

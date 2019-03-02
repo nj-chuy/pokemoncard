@@ -39,7 +39,7 @@ class App extends Component {
         {this.state.isSignedIn ? (
           <span>
             <div className=".container">
-              <header style={{ backgroundColor: 'skyblue' }}>
+              <header id="header">
               <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign Out!</button>
             <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
@@ -50,7 +50,7 @@ class App extends Component {
               </div>
             </div>
            
-            {/* <img
+             {/* <img
               alt="profile picture"
               src={firebase.auth().currentUser.photoURL}
             /> */}
