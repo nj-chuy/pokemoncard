@@ -25,6 +25,11 @@ export default {
     console.log(savedCards);
     const postData = { name: savedCards.name, id: savedCards.id, artist: savedCards.artist, image:savedCards.image, attack: savedCards.attack, attackDamage: savedCards.attackDamage, description: savedCards.description, hp: savedCards.hp}
     return axios.post("/api/cards/", postData);
-  }
+  },
+  // Deletes the book with the given id
+  // deleteBook: function(deleteCards) {
+  //   const deleteData = { name: deleteCards.name, id: deleteCards.id, artist: deleteCards.artist, image:deleteCards.image, attack: deleteCards.attack, attackDamage: deleteCards.attackDamage, description: deleteCards.description, hp: deleteCards.hp}
+  //   return axios.delete("/api/cards/", deleteData);
+  // },
 
 };
