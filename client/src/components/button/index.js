@@ -4,7 +4,7 @@ import React from "react";
 
 const PokeBtn = props => {
   return (
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+    <button {...props} style={{ float: "center", marginBottom: 10 }} className="btn btn-success">
       {props.children}
     </button>
   );

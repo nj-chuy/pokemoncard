@@ -2,6 +2,11 @@ import axios from "axios";
 // import { PromiseProvider } from "mongoose";
 
 export default {
+  // Gets all books
+  getBooks: function() {
+    return axios.get("/api/cards");
+  },
+
   // Gets the book with the given id
   getCards: function(id) {
     return axios.get("/api/cards/" + id);
