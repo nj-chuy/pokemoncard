@@ -10,6 +10,7 @@ const bookSchema = new Schema({
   artist: String,
   hp: String,
   attack: String,
+  userID: String,
 });
 
 const Book = mongoose.model("Book", bookSchema);
