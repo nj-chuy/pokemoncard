@@ -3,6 +3,7 @@ import API from "../utils/API";
 import PokeBtn from "../components/button";
 
 const BookCard = props => {
+  var user = sessionStorage.getItem("userID");
   return (
     <div className="carousel slide">
       <div className="carousel-inner">
@@ -24,7 +25,9 @@ const BookCard = props => {
                   attack: props.attack, 
                   attackDamage: props.attackDamage, 
                   description: props.description, 
-                  hp: props.hp })}}>
+                  hp: props.hp,
+                  userID: user
+                })}}>
                   I choose YOU!
           </PokeBtn>
         </div>
