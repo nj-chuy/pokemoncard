@@ -16,7 +16,7 @@ const MyCard = props => {
           <h3>ARTIST: {props.artist}</h3>
           <h3>IMAGE: {props.image}</h3>
           <h3>HP: {props.hp}</h3>
-          <DeleteBtn onClick={() => this.deleteBook(props._id)} />
+          <DeleteBtn onClick={() => API.deleteCards(props._id)} />
         </div>
       </div>
     </div>

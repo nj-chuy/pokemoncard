@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Results from "../components/results";
+import Results from "../components/myResults";
 import API from "../utils/API"
 
 class Mycards extends Component {
@@ -12,7 +12,8 @@ class Mycards extends Component {
       }
 
       loadBooks = () => {
-        API.getBooks()
+        var userID = sessionStorage.getItem("userID");
+        API.getBooks(userID)
           .then(res =>
             this.setState({ books: res.data })
           )
