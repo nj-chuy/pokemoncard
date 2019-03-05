@@ -1,63 +1,23 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
-import BookSearch from "./components/bookSearch";
-import NavBar from "./components/navBar";
-import firebase from "firebase"
-import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-
-firebase.initializeApp({
-  apiKey: "AIzaSyBhTYhTbeIU0F6nU5zP7cKA4N3pG61M7Qk",
-  authDomain: "fir-auth-tutorial-6eb29.firebaseapp.com"
-})
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/home";
+import Mycards from "./pages/mycards";
+import NoMatch from "./pages/NoMatch";
 
 class App extends Component {
-  state = { isSignedIn: false }
-  uiConfig = {
-    signInFlow: "popup",
-    signInOptions: [
-      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID
-    ],
-    callbacks: {
-      signInSuccess: () => false
-    }
-  }
-  componentDidMount = () => {
-    firebase.auth().onAuthStateChanged(user => {
-      this.setState({ isSignedIn: !!user })
-      console.log("user", user)
-    })
-  }
+  
   render() {
     return (
-
-      <div className="App">
-        {this.state.isSignedIn ? (
-          <span>
-            <div className=".container">
-              <header id="header">
-              <h1>Welcome {firebase.auth().currentUser.displayName} 
-              <img alt="profile picture" src={firebase.auth().currentUser.photoURL}/></h1>
-              <button onClick={() => firebase.auth().signOut()}>Sign Out!</button>
-                <NavBar />
-              </header>
-              <div className="App-header">
-                <BookSearch />
-                
-              </div>
-            </div>
-          </span>
-        ) : (
-            <StyledFirebaseAuth
-              uiConfig={this.uiConfig}
-              firebaseAuth={firebase.auth()}
-            />
-          )}
-      </div>
+      <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/mycards" component={Mycards} />
+          {/* <Route exact path="/books/:id" component={Detail} /> */}
+            <Route component={NoMatch} />
+          </Switch>
+      </Router>
     );
   }
 }

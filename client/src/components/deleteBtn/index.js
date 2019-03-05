@@ -1,14 +1,14 @@
-// import React from "react";
-// import "./DeleteBtn.css";
+import React from "react";
+import "./DeleteBtn.css";
 
-// // This file exports button components
+// This file exports button components
 
-// const PokeBtn = props => {
-//   return (
-//     <button {...props} style={{ float: "right", marginBottom: 10 }} className="delete-btn">
-//       {props.children}
-//     </button>
-//   );
-// }
+const DeleteBtn = props => {
+       return (
+        <button className="delete-btn" {...props} role="button" tabIndex="0">
+        Remove Card
+      </button>
+   );
+ }
 
-// export default PokeBtn;
+export default DeleteBtn;
