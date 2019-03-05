@@ -5,7 +5,7 @@ import "./DeleteBtn.css";
 
 const DeleteBtn = props => {
        return (
-        <button className="delete-btn" {...props} role="button" tabIndex="0">
+        <button className="delete-btn" {...props} tabIndex="0">
         Remove Card
       </button>
    );

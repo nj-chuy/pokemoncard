@@ -16,6 +16,7 @@ const BookCard = props => {
           <h3>RARITY: {props.description}</h3>
           <h3>ARTIST: {props.artist}</h3>
           <h3>HP: {props.hp}</h3>
+          <h3>name: {props.name}</h3>
           <PokeBtn  
             onClick={()=>{API.savedCards({
                   name: props.title, 
