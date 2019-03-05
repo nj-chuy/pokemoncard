@@ -6,12 +6,10 @@ import Home from "./pages/home";
 import Mycards from "./pages/mycards";
 import NoMatch from "./pages/NoMatch";
 
-
 class App extends Component {
   
   render() {
     return (
-
       <Router>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -20,10 +18,6 @@ class App extends Component {
             <Route component={NoMatch} />
           </Switch>
       </Router>
-
-
-      
-
     );
   }
 }
