@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
+import BookSearch from "./components/bookSearch";
 import NavBar from "./components/navBar";
-
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/home";
-import Mycards from "./pages/mycards";
-import NoMatch from "./pages/NoMatch";
-
 import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 
@@ -15,7 +10,6 @@ firebase.initializeApp({
   apiKey: "AIzaSyBhTYhTbeIU0F6nU5zP7cKA4N3pG61M7Qk",
   authDomain: "fir-auth-tutorial-6eb29.firebaseapp.com"
 })
-
 
 class App extends Component {
   state = { isSignedIn: false }
@@ -41,40 +35,21 @@ class App extends Component {
   render() {
     return (
 
-      <Router>
-        <div>
-          <header style={{ backgroundColor: "skyblue" }}>
-            <NavBar />
-          </header>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/mycards" component={Mycards} />
-          {/* <Route exact path="/books/:id" component={Detail} /> */}
-            <Route component={NoMatch} />
-          </Switch>
-        </div>
-      </Router>
-
-
       <div className="App">
         {this.state.isSignedIn ? (
           <span>
             <div className=".container">
               <header id="header">
-              <div>Signed In!</div>
-            <button onClick={() => firebase.auth().signOut()}>Sign Out!</button>
-            <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
+              <h1>Welcome {firebase.auth().currentUser.displayName} 
+              <img alt="profile picture" src={firebase.auth().currentUser.photoURL}/></h1>
+              <button onClick={() => firebase.auth().signOut()}>Sign Out!</button>
                 <NavBar />
               </header>
               <div className="App-header">
                 <BookSearch />
+                
               </div>
             </div>
-           
-             {/* <img
-              alt="profile picture"
-              src={firebase.auth().currentUser.photoURL}
-            /> */}
           </span>
         ) : (
             <StyledFirebaseAuth
@@ -83,7 +58,6 @@ class App extends Component {
             />
           )}
       </div>
-
     );
   }
 }

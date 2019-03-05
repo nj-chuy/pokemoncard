@@ -1,5 +1,5 @@
 import React from "react";
-import BookCard from "./bookCard";
+import BookCard from "../components/BookCard";
 
 const Results = props => {
   console.log(props);
