@@ -1,6 +1,8 @@
 import React from "react";
 import API from "../utils/API";
 import DeleteBtn from "../components/DeleteBtn";
+// import {Button} from "react-bootstrap";
+// import {Link} from "react-router-dom";
 
 const MyCard = props => {
   return (
@@ -15,8 +17,8 @@ const MyCard = props => {
           <h3>RARITY: {props.description}</h3>
           <h3>ARTIST: {props.artist}</h3>
           <h3>IMAGE: {props.image}</h3>
-          <h3>HP: {props.hp}</h3>
-          <DeleteBtn onClick={() => API.deleteCards(props._id)} />
+          <h3>HP: {props.hp}</h3>          
+          <DeleteBtn onClick={props.delete} />
         </div>
       </div>
     </div>

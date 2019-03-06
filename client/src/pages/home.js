@@ -34,6 +34,11 @@ class Home extends Component {
       sessionStorage.setItem("userID",user.uid)
     })
   }
+  signOut = () => {
+    firebase.auth().signOut();
+    this.setState({isSignedIn: false})
+
+  }
 
   render() {
       return (
@@ -43,7 +48,7 @@ class Home extends Component {
                 <div className=".container">
                 <header id="header">
                 <div>Signed In!</div>
-                <button onClick={() => firebase.auth().signOut()}>Sign Out!</button>
+                <button onClick={() => this.signOut()}>Sign Out!</button>
                 <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
                     <NavBar />
                 </header>

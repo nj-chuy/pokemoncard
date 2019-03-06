@@ -6,7 +6,7 @@ class NavBar extends Component {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary" >
-          <header className="animated bounceInDown" id="title">Pokemon Card Game</header>
+          <header className="animated bounceInDown" id="title">Pokemon Card Collector</header>
         </nav>
       </div>
     );

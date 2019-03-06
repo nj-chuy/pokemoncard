@@ -21,6 +21,7 @@ const Results = props => {
                 image={(info.hasOwnProperty("imageUrlHiRes")) ? info.imageUrlHiRes : info.image}
                 artist={info.artist}
                 hp = {info.hp}
+                delete = {props.delete}
               />
             );
           })
