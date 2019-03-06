@@ -8,7 +8,6 @@ const Search = (props) => {
                 <input onChange= {props.handleSearchProp} type="text"/>
                 {/* onChange will fire to event handler with each input */}
                 <button type="submit">Choose Your Pokemon!</button>
-                <button type="submit"id="submitResults">Your PokeDeck</button>
             </form>
             </div>
          )
