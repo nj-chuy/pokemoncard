@@ -1,6 +1,6 @@
 import React from "react";
 import API from "../utils/API";
-import DeleteBtn from "../components/DeleteBtn";
+import DeleteBtn from "./DeleteBtn";
 // import {Button} from "react-bootstrap";
 // import {Link} from "react-router-dom";
 
