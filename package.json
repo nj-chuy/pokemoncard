@@ -2,7 +2,10 @@
   "name": "react-google-books",
   "version": "1.0.0",
   "description": "",
-  "engines" : { "node" : "~8.11.3" },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
