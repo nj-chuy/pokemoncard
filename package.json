@@ -10,9 +10,13 @@
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "build": "react-scripts build",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:8000",
+
   "author": "",
   "license": "ISC",
   "devDependencies": {
