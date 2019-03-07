@@ -1,6 +1,10 @@
 {
   "name": "mern",
   "version": "1.0.0",
+  "engines": {
+    "yarn": "1.x",
+    "node": "10.x"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
