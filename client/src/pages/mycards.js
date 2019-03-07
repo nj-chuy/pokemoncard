@@ -36,6 +36,10 @@ class Mycards extends Component {
                         this.state.books.map((book, i) => {
                             var info = book;
                             return (
+                                // <span>
+                                //     <h1>Your PokeDeck Collection</h1>
+                                //     <NavBar />
+                                // </span>
                                 <MyCard
                                     _id={info._id}
                                     id={info.id}
@@ -47,9 +51,9 @@ class Mycards extends Component {
                                     image={(info.hasOwnProperty("imageUrlHiRes")) ? info.imageUrlHiRes : info.image}
                                     artist={info.artist}
                                     hp={info.hp}
-                                    delete={()=> this.deleteCard(info._id)}
+                                    delete={() => this.deleteCard(info._id)}
                                 />
-                            );
+                        );
                         })
                     ) : (
                             <h3>No Results to Display</h3>
